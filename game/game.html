@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lugrasimo&family=WindSong:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Aetherial Citadel Saga</title>
+    <link
+      rel="shortcut icon"
+      href="../img/icons8-wind-48.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/game.css" />
+  </head>
+  <body>
+    <!-- AUDIO SAMPLE -->
+    <div class="audio-player">
+      <audio
+        id="audio"
+        src="./audio/2019-06-14_-_Warm_Light_-_David_Fesliyan.mp3"
+        type="audio/mpeg"
+        loop
+      ></audio>
+      <button class="play-button" onclick="toggleAudio()">
+        <i class="fa-solid fa-music"></i>
+        <i class="fa-solid fa-music fa-2x"></i>
+        <i class="fa-solid fa-music"></i>
+      </button>
+    </div>
+    <!--  -->
+
+    <div class="title">
+      <h1><span>A</span>etherial <span>C</span>itadel <span>S</span>aga</h1>
+      <p>The Sky is not the Limit</p>
+    </div>
+    <div class="tags">
+      <div>
+        <a href="../game/char-select.html"
+          ><button class="buttons">Start new Adventure</button></a
+        >
+      </div>
+      <div>
+        <a href="#"><button class="buttons">Continue</button></a>
+      </div>
+      <div>
+        <a href="./server.html"
+          ><button class="buttons">Change Server</button></a
+        >
+      </div>
+    </div>
+    <i class="fa-solid fa-yin-yang fa-3x fa-spin"></i>
+    <div class="elements">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <hr />
+    <p id="copyright">&copy Kenneth Liese</p>
+
+    <script>
+      const audio = document.getElementById("audio");
+      audio.volume = 0.1; 
+
+      function toggleAudio() {
+        var audio = document.getElementById("audio");
+        if (audio.paused) {
+          audio.play();
+          document.querySelector(".play-button").classList.add("playing");
+        } else {
+          audio.pause();
+          document.querySelector(".play-button").classList.remove("playing");
+        }
+      }
+    </script>
+  </body>
+</html>

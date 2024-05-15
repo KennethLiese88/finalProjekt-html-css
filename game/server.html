@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Server Issue</title>
+    <link rel="stylesheet" href="../css/server.css" />
+  </head>
+  <body>
+    <main>
+      <div class="image">
+        <img src="../img/download.png" alt="connection lost" />
+      </div>
+      <div class="server-message">
+        <h1>
+          There was a problem creating the game.
+          <span>The request has timed out. (Error 404)</span>
+        </h1>
+
+        <p>Possible causes: Server not found</p>
+        <p>Try the following:</p>
+        <ul>
+          <li>Check connection</li>
+          <li>Check proxy and firewall</li>
+          <li>Try javascript for a change you idiot..</li>
+          <li><a href="../chatgpt/chatgpt.html" target="_blank">Ask ChatGPT</a></li>
+        </ul>
+      </div>
+      <div class="connection-animation">
+        <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+        <span>ERR_CONNECTION_REFUSED</span>
+      </div>
+
+      <div class="buttons">
+        <button>
+          <details>
+            <summary>Details</summary>
+            <p>Error 404: Brain Not Found <br> Eine humorvolle Art zu sagen, dass die angeforderte Ressource nicht gefunden werden kann, weil das Gehirn des Servers fehlt.</p>
+          </details>
+        </button>
+        <a href="./server.html"><button>Reload Page</button></a>
+        <a href="./game.html"><button>Back</button></a>
+      </div>
+    </main>
+  </body>
+</html>

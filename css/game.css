@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  animation: fade-in 3s linear forwards;
+}
+
+.play-button {
+  border: none;
+  background-color: transparent;
+}
+
+.play-button i {
+  color: rgba(255, 255, 255, 0.51);
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.44);
+}
+
+.play-button i:hover {
+  cursor: sw-resize;
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+body {
+  background: linear-gradient(
+      140deg,
+      rgba(254, 125, 125) 0%,
+      rgba(207, 249, 247, 0.515) 20%,
+      rgb(36, 50, 170, 0.5) 80%,
+      rgba(0, 0, 0) 100%
+    ),
+    url(../img/sky.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  animation: fade-in 6s linear forwards;
+  overflow: hidden;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title {
+  margin-block: 80px;
+  position: relative;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Lugrasimo", cursive;
+  text-shadow: 0 0 10px white, 0 0 10px white;
+  animation: scale 4s linear forwards;
+}
+
+span {
+  position: relative;
+  top: 20px;
+  font-size: 8rem;
+  color: darkblue;
+  padding-right: 4px;
+}
+
+p {
+  font-size: 3rem;
+  font-family: "WindSong", cursive;
+  text-shadow: 0 0 10px white, 0 0 10px white;
+  animation: scale 4s linear 1s forwards;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.tags div {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+a {
+  width: 400px;
+  background-color: rgba(135, 207, 235, 0.275);
+  border: 3px solid rgb(208, 199, 246);
+  outline: 3px solid rgb(147, 147, 232);
+  border-radius: 50px;
+  box-shadow: 3px 3px 1px black, -3px -3px 1px black, inset 2px 0 3px black,
+    inset -2px 0 3px black;
+  margin-bottom: 10px;
+}
+
+.tags div:nth-of-type(1) {
+  animation: transition 1s linear 3s forwards;
+}
+
+.tags div:nth-of-type(2) {
+  animation: transition 1s linear 3.5s forwards;
+}
+
+.tags div:nth-of-type(3) {
+  animation: transition 1s linear 4s forwards;
+}
+
+@keyframes transition {
+  0% {
+    transform: translateX(-600px);
+    opacity: 0;
+  }
+  85% {
+    transform: translateX(50px);
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* divs waren unnötig, hover effekt tritt vermutlich wegen der animation nicht in kraft (forwards)
+
+.tags div:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+} */
+
+.buttons:hover {
+  cursor: sw-resize;
+  background-color: rgba(135, 207, 235, 0.331);
+  border-radius: 50px;
+  padding-inline: 20px;
+}
+
+.buttons {
+  font-family: "Indie Flower", cursive;
+  font-size: 2rem;
+  background-color: transparent;
+  color: white;
+  text-shadow: 3px 3px 3px black, -3px -3px 3px black;
+  border: none;
+  border-radius: 50px;
+  padding: 3px;
+}
+
+i {
+  color: rgba(245, 245, 245, 0.5);
+  margin-top: 50px;
+}
+
+hr {
+  width: 400px;
+  border: 1px dashed rgba(245, 245, 245, 0.5);
+}
+
+#copyright {
+  padding: 0;
+  font-size: 2rem;
+  animation: none;
+}
+
+/* EXPERIMENTING */
+
+.elements {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.elements div {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 10px white;
+  opacity: 0;
+}
+
+@keyframes lumina {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-1200px);
+    opacity: 1;
+  }
+}
+
+.elements div:nth-of-type(1) {
+  animation: lumina 10s linear 3s infinite;
+}
+
+.elements div:nth-of-type(2) {
+  animation: lumina 9s linear 8s infinite;
+}
+
+.elements div:nth-of-type(3) {
+  animation: lumina 10s linear 0.7s infinite;
+}
+
+.elements div:nth-of-type(4) {
+  animation: lumina 10s linear 3.3s infinite;
+}
+
+.elements div:nth-of-type(5) {
+  animation: lumina 12s linear 12s infinite;
+}
+
+.elements div:nth-of-type(6) {
+  animation: lumina 6s linear 1.5s infinite;
+}

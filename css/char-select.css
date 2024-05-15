@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 2.5rem;
+  /* font-family: "Oregano", cursive; */
+  font-family: "Tangerine", cursive;
+  /* font-family: "Macondo", cursive; */
+  background-color: black;
+  background-image: url(../img/creator-bg-h.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 288px;
+  overflow: hidden;
+}
+
+/* CARDS */
+
+.card-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.male,
+.female {
+  overflow: hidden;
+  border: 2px solid rgb(28, 34, 3);
+  outline: 2px solid rgb(216, 198, 91);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: transform 1s ease;
+  opacity: 1;
+}
+
+/* CHARAKTER CREATOR */
+
+.creator {
+  position: relative;
+  top: -130px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: rgb(246, 164, 57);
+  text-shadow: 0 0 3px gold;
+  padding: 20px;
+}
+
+form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: url(../img/form-bg.jpg);
+  color: rgb(234, 208, 66);
+  text-shadow: 3px 3px 3px black;
+  border: 2px solid rgb(28, 34, 3);
+  outline: 2px solid rgb(216, 198, 91);
+  box-shadow: inset 3px 3px 10px black, inset -3px -3px 10px black;
+  border-radius: 10px;
+  margin-inline: 20px;
+  padding: 20px;
+}
+
+label:not(label[for="gender1"], label[for="gender2"]) {
+  background-color: rgba(0, 0, 0, 0.386);
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+input,
+label,
+select {
+  padding: 10px 6px;
+}
+
+input,
+select {
+  background-color: black;
+  color: gray;
+}
+
+input[type="radio"] {
+  background-color: transparent;
+}
+
+p {
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.386);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* BUTTONS */
+
+.buttons {
+  margin-top: 50px;
+}
+
+button {
+    position: relative;
+    font-size: 1rem;
+    background-image: url(../img/form-bg.jpg);
+    color: rgb(234, 208, 66);
+    text-shadow: 3px 3px 3px black;
+    border: 2px solid rgb(28, 34, 3);
+    outline: 2px solid rgb(216, 198, 91);
+    box-shadow: inset 3px 3px 10px black, inset -3px -3px 10px black;
+    border-radius: 3px;
+    padding: 10px;
+    margin-inline: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.button1:hover::before {
+    content: "\f0d9";
+    font-family: FontAwesome;
+    position: absolute;
+    left: -20px;
+    padding-right: 6px;
+}
+
+.button2:hover::after {
+    content: "\f0da";
+    font-family: FontAwesome;
+    position: absolute;
+    right: -20px;
+    padding-left: 6px;
+}
